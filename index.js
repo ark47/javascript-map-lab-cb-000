@@ -39,7 +39,7 @@ const zebraStripes = [
 ];
 
 function colorPicker(zebra) {
-  if (Math.floor(zebra.width % 2) === 0) {
+  if (Math.floor(zebra.width % 2) === 0 && zebra.width >= 1 || zebra.width > Math.floor(zebra.width) + 0.7) {
     return Object.assign({}, zebra, { color: 'black'});
   }
   else {
